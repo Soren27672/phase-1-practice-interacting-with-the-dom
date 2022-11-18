@@ -9,6 +9,33 @@
       display: table;
       padding: 10px;
     }
+    body {
+      background-color: #a9a9a9;
+    }
+    * {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .list {
+      width: fit-content;
+    }
+    .commentDiv {
+      border-style: solid;
+      border-width: 2px;
+      padding: 5px;
+      margin-bottom: 2px;
+      margin-top: 2px;
+      width: fit-content;
+      background-color: #cfcfcf;
+    }
+    .commentTitle {
+      font-style: italic;
+      color: #565656;
+    }
+    .commentBody, .commentTitle, input {
+      margin: 4px;
+    }
   </style>
 </head>
 <body>
@@ -23,23 +50,25 @@
   <button id='heart' > ❤️ </button>
   <button id='pause' > pause </button>
 
-  <ul class='likes'></ul>
+  <div class="list">
+    <ul class='likes' id="list"></ul>
+  </div>
 
   <div>
     <h3>Comments</h3>
-    <div id='list' class='comments'></div>
+    <div id='comments' class='comments'></div>
 
     <h3>Leave a comment</h3>
 
     <form id="comment-form" action="">
       <input type='text' name="comment" id="comment-input" cols="30" rows="10">
       </br>
-      <button id='submit'>submit</button>
+      <button id='submit'>Post!</button>
     </form>
 
   </div>
 
-  <script src="js/index.min.js"></script>
+  <!-- <script src="js/index.min.js"></script> -->
   <script src="js/challenge.js"></script>
 </body>
 </html>
